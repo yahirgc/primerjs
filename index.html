@@ -1,0 +1,190 @@
+<html>
+
+<head>
+	<title>PROGRAMAS</title>
+
+	<meta charset="utf-8">
+
+	<SCRIPT>
+	//nombre(){} 
+		nombre = prompt ("Tu Nombre");
+		//alert("");
+		//nombre();
+		document.write("Hola " + nombre + " buenas");
+		
+		//sacar el cubo
+		function cubo(){
+			let xd, resxd;
+	 		xd = document.getElementById("cub").value 
+	        	resxd = parseFloat(xd) * parseFloat(xd) * parseFloat(xd);
+			document.getElementById("resu").innerHTML = resxd;}
+		
+		
+		//area de un trapecio
+		function aretra(){
+			let ba1, ba2, alt, resat;
+	 		ba1 = document.getElementById("b1").value
+	 		ba2 = document.getElementById("b2").value
+	 		alt = document.getElementById("al").value
+	        	sumabases = parseFloat(ba1) + parseFloat(ba2);
+	        	mediana = sumabases / 2;
+	        	resat = mediana * parseFloat(alt);
+			document.getElementById("resuat").innerHTML = resat;}
+		    
+		    
+        //Teorema de Pitagoras		    
+		function tedepi(){
+			let valora, valorb, restp, optp, sumaab, raiz;
+	 		valora = document.getElementById("atp").value
+	 		valorb = document.getElementById("btp").value
+	        	aop = parseFloat(valora) * parseFloat(valora);
+	        	bop = parseFloat(valorb) * parseFloat(valorb);
+            		sumaab = aop + bop;
+            		raiz = (Math.sqrt(sumaab))
+            		restp = raiz;
+			document.getElementById("resutp").innerHTML = restp;}
+		    
+		    function vinos(){
+                edad = prompt("Dime tu edad");
+                despacho = ("Bien,  " + nombre + " Puedes pasar");
+
+                    if (edad < 18){
+                        alert("No puedes pasar");}
+                        
+                    else if (edad => 18){
+                        document.getElementById("nashe1").innerHTML = despacho;
+                        }
+                        }
+		    
+
+		    function evaluar() {
+                var ev = document.getElementById("evaluar").value
+                document.getElementById("resultado").innerHTML = eval(ev);}
+		    
+		    
+	</SCRIPT>
+	
+
+	<style>	
+	
+	
+		body{   margin:0px 100px;
+      			background-color: #ccffcc;
+      			COLOR:#000000;
+      			FONT-FAMILY:quicksand;
+      			FONT-SIZE:20PX;
+      			padding:0px;}
+      		
+      		
+      		#di{	background-color: #aaffaa;
+     			color: #000000;
+     			border: 1px solid #ffffff;
+     			margin: 0px;
+     			padding: 0px;}
+     		
+     		
+     		.h1 {	font-size:40;
+     			text-shadow: 0px 2px 4px;}
+     			
+     		
+      		 h3 {font-size:30;
+     			 text-shadow: 0px 2px 4px;}
+      		
+	</style>	
+
+
+</head>
+
+
+<body>
+
+
+<center>
+
+
+    <h1 class="h1">5 PROGRAMAS</h1>
+    
+    <p id="nombre"></p>
+
+
+    <div id="di">
+    
+    <h3>Sacar el cubo</h3>
+
+	<input type="text" id="cub" value="4">
+	<br>
+        <input type="button" onclick="cubo()" value="Resultado"/>
+        <p id="resu"></p>
+    
+</div>
+
+
+<br>
+
+
+<div id="di">
+    
+    <h3>Area de un Trapecio</h3>
+
+	base de arriba<br>
+	<input type="text" id="b1" value="3">
+<br>
+	base de abajo<br>
+	<input type="text" id="b2" value="6">
+<br>
+	altura<br>
+	<input type="text" id="al" value="4">
+	<br>
+        	        <input type="button" onclick="aretra()" value="Resultado"/>
+        <p id="resuat"></p>
+    
+</div>
+
+<br>
+
+
+<div id="di">
+    
+        <h3>Teorema de Pitagoras</h3>
+
+	        Valor de a<br>
+	        <input type="text" id="atp" value="5">
+            <br>
+	        Valor de b<br>
+	        <input type="text" id="btp" value="3">
+            <br>
+            <input type="button" onclick="tedepi()" value="Resultado"/>
+            <p id="resutp"></p>
+    
+</div>
+
+
+<br>
+
+
+<div id="di">
+
+    <H3>Casino</H3>
+        
+            <button type="text" onclick="vinos()">Entrar</button>
+            
+            <p id="nashe1"></p>
+
+</div>
+  
+<br>
+    
+<div id="di">
+
+    <h3>Calculadora</h3>    
+    
+    <input type="text" id="evaluar" value="18+11">
+    <input name="suma" type="button" onClick="evaluar()" value="sumar" />
+    <p id="resultado"> </p>
+
+</div>    
+
+    
+</body>
+
+</html>
